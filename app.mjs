@@ -1,5 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
+import cors from 'cors';
 const app = express()
 
 const port = process.env.PORT || 3000
@@ -7,8 +8,10 @@ const port = process.env.PORT || 3000
 
 
 let users = [];
+app.use(cors())
 app.use(express.json())
 app.use(morgan('short'))
+
 
 app.use((req, res, next) => {
 
