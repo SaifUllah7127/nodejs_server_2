@@ -22,7 +22,6 @@ app.use((req, res, next) => {
 })
 
 app.get('/users', (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*")
   res.send(users)
 })
 app.get('/user/:id', (req, res) => {
